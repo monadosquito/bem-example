@@ -1,4 +1,3 @@
-{-# LANGUAGE EmptyDataDeriving #-}
 {-# LANGUAGE GADTs #-}
 {-# LANGUAGE KindSignatures #-}
 {-# LANGUAGE StandaloneDeriving #-}
@@ -7,6 +6,7 @@
 module Bem.Scheme where
 
 
+import Bem.Utl.Utl
 import Data.Kind
 
 
@@ -27,10 +27,6 @@ data HeaderElem m where
          Header_Logo :: HeaderElem NoMod
          Header_Search :: HeaderElem NoMod
 deriving instance Show (HeaderElem m)
-
-data NoElem m deriving Show
-
-data NoMod deriving Show
 
 data RootElem m where
          Root_Header :: RootElem NoMod
