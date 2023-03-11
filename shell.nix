@@ -11,5 +11,16 @@ in
 :
 pkgs.mkShell
     {
-        buildInputs = [dvg-git fetch-hash traverse];
+        buildInputs
+            =
+            [
+                dvg-git
+                fetch-hash
+                traverse
+                (pkgs.writeShellScriptBin
+                     "watch"
+                     (pkgs.lib.readFile ./scr/watch.sh)
+                )
+                pkgs.ghcid
+            ];
     }

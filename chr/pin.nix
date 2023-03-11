@@ -22,4 +22,9 @@
             (fetchTarball
                  https://github.com/monadosquito/traverse/archive/v1.0.0.tar.gz
             );
+    ghcNixpkgs
+        =
+        import
+            (fetchTarball https://github.com/NixOS/nixpkgs/archive/4dd5c93998da55002fdec1c715c680531420381c.tar.gz
+            );
 }
