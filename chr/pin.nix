@@ -27,4 +27,10 @@
         import
             (fetchTarball https://github.com/NixOS/nixpkgs/archive/4dd5c93998da55002fdec1c715c680531420381c.tar.gz
             );
+    bem
+        =
+        import
+            (fetchTarball
+                 https://github.com/monadosquito/bem/archive/3dd2b0991501ae5accfe83fb7f334d96c3ac5c7f.tar.gz
+            );
 }

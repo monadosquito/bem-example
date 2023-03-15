@@ -4,6 +4,7 @@ let
     pin = import ./chr/pin.nix;
     traverse = pin.traverse {};
     nixpkgs = pin.nixpkgs {};
+    bem = pin.bem {};
 in
 {
     pkgs ? nixpkgs,
